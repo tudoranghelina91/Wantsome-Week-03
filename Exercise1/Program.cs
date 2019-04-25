@@ -15,24 +15,9 @@ namespace Exercise1
             int[] array = new int[arrLength];
             int index = 0;
             InputHandling.ReadArrayElements(ref array, arrLength, ref index);
-            Console.WriteLine("The sum of the even array elements is: {0}", Sum(array, arrLength));
+            Console.WriteLine("The sum of the even array elements is: {0}", CalculateSum.Sum(array, arrLength));
             OutputHandling.Question("Do you want to print the sum of other even numbers in an array? Y / N");
             programRunning = InputHandling.QuestionOptions();
-        }
-
-        static int Sum(int[] arr, int arrLength)
-        {
-            int s = 0;
-
-            for (int i = 0; i < arrLength; i++)
-            {
-                if (arr[i] % 2 == 0)
-                {
-                    s += arr[i];
-                }
-            }
-
-            return s;
         }
 
         static void Main(string[] args)

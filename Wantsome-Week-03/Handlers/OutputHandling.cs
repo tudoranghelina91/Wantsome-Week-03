@@ -8,7 +8,7 @@ namespace Wantsome_Week_03.Handlers
 {
     public class OutputHandling
     {
-        public static void Message(string message, ConsoleColor consoleColor)
+        public static void Message(string message, ConsoleColor consoleColor = ConsoleColor.White)
         {
             Console.ForegroundColor = consoleColor;
             Console.WriteLine(message);
