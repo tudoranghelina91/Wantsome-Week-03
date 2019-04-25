@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDAE40E4-3BCD-4682-B4F2-95A938890921}</ProjectGuid>
+    <ProjectGuid>{AB06F90F-652D-4DD2-B5F7-2B31F5DAEF8E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Wantsome_Week_03</RootNamespace>
-    <AssemblyName>Wantsome-Week-03</AssemblyName>
+    <RootNamespace>Exercise4</RootNamespace>
+    <AssemblyName>Exercise4</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayOperations\DuplicateRemoval.cs" />
-    <Compile Include="ArrayOperations\Sorting.cs" />
-    <Compile Include="Handlers\InputHandling.cs" />
-    <Compile Include="Handlers\OutputHandling.cs" />
-    <Compile Include="Handlers\ProgramFlowHandling.cs" />
+    <Compile Include="Classes\CommonElementsInArray.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,7 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <ProjectReference Include="..\Wantsome-Week-03\Wantsome-Week-03.csproj">
+      <Project>{fdae40e4-3bcd-4682-b4f2-95a938890921}</Project>
+      <Name>Wantsome-Week-03</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,11 +33,11 @@ namespace Wantsome_Week_03.Handlers
             return programRunning;
         }
 
-        public static int ReadArrayLength()
+        public static int ReadArrayLength(string messagePrefix = "Array Length: ")
         {
             try
             {
-                OutputHandling.Question("Array Length: ", false);
+                OutputHandling.Question(messagePrefix, false);
                 int arrayLength = Convert.ToInt32(Console.ReadLine());
                 return arrayLength;
             }
@@ -45,7 +45,7 @@ namespace Wantsome_Week_03.Handlers
             catch
             {
                 OutputHandling.Error("Invalid input value! Please use an integer");
-                return ReadArrayLength();
+                return ReadArrayLength(messagePrefix);
             }
         }
 
