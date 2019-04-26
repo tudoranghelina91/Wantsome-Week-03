@@ -12,7 +12,7 @@ namespace Exercise5.Classes
         public static void DisplayLinkedList(LinkedList<int> linkedList)
         {
             int i = 1;
-            OutputHandling.Message("The values in the linked list after the duplicates removal are: ", ConsoleColor.Green);
+            OutputHandling.Message("The values in the sorted linked list after the duplicates removal are: ", ConsoleColor.Green);
 
             foreach(var node in linkedList)
             {

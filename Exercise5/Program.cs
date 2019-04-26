@@ -13,13 +13,13 @@ namespace Exercise5
         static void RunProgram(ref bool programRunning)
         {
 
-            int linkedListLength = InputHandling.ReadValue("Linked List Length: ");
+            int linkedListLength = InputHandling.ReadValue("Sorted Linked List Length: ");
             LinkedList<int> linkedList = new LinkedList<int>();
             int index = 0;
             InputHandling.ReadLinkedListElements(ref linkedList, linkedListLength, ref index);
             LinkedListDuplicates.RemoveLinkedListDuplicates(ref linkedList);
             LinkedListDuplicates.DisplayLinkedList(linkedList);
-            OutputHandling.Question("Do you want to remove duplicates from another Linked List? Y / N");
+            OutputHandling.Question("Do you want to remove duplicates from another sorted Linked List? Y / N");
             programRunning = InputHandling.QuestionOptions();
         }
 
