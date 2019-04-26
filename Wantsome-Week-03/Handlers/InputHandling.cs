@@ -82,5 +82,24 @@ namespace Wantsome_Week_03.Handlers
                 return ReadValue(message);
             }
         }
+
+        public static void ReadLinkedListElements(ref LinkedList<int> linkedList, int linkedListLength, ref int index)
+        {
+          
+                for (int i = 0; i < linkedListLength; i++)
+                {
+                    try
+                    {
+                        OutputHandling.Question("Element " + i + ": ", false);
+                        linkedList.AddFirst(Convert.ToInt32(Console.ReadLine()));
+                    }
+
+                    catch
+                    {
+                        OutputHandling.Error("Invalid input value! Please use an integer");
+                        index = i--;
+                    }
+                }
+        }
     }
 }

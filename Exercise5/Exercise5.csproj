@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wantsome-Week-03\Wantsome-Week-03.csproj">
+      <Project>{fdae40e4-3bcd-4682-b4f2-95a938890921}</Project>
+      <Name>Wantsome-Week-03</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
