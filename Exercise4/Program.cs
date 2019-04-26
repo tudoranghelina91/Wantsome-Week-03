@@ -13,31 +13,22 @@ namespace Exercise4
     {
         static void RunProgram(ref bool programRunning)
         {
-            int arr1Len = InputHandling.ReadArrayLength("Length of first array: ");
-            int arr2Len = InputHandling.ReadArrayLength("Length of second array: ");
+            int arrLen = InputHandling.ReadArrayLength();
+            int[] arr = new int[arrLen];
+            int index = 0;
+            InputHandling.ReadArrayElements(ref arr, arrLen, ref index);
+            bool hasDuplicates = DuplicatesInArray.HasDuplicates(arr, arrLen);
+            if (hasDuplicates)
+            {
+                OutputHandling.Message("The array contains duplicates", ConsoleColor.Magenta);
+            }
 
-            int[] array1 = new int[arr1Len];
-            int[] array2 = new int[arr2Len];
-            int arr1Index = 0;
-            int arr2Index = 0;
+            else
+            {
+                OutputHandling.Message("The array does not contain duplicates", ConsoleColor.Cyan);
+            }
 
-            OutputHandling.Message("Elements of first array", ConsoleColor.Blue);
-            InputHandling.ReadArrayElements(ref array1, arr1Len, ref arr1Index);
-            OutputHandling.Message("Elements of second array", ConsoleColor.Blue);
-            InputHandling.ReadArrayElements(ref array2, arr2Len, ref arr2Index);
-
-            // Sort arrays
-            Sorting.BubbleSort(ref array1, arr1Len);
-            Sorting.BubbleSort(ref array2, arr2Len);
-
-            // Remove duplicate elements from arrays
-            DuplicateRemoval.RemoveDuplicates(ref array1, ref arr1Len);
-            DuplicateRemoval.RemoveDuplicates(ref array2, ref arr2Len);
-
-            // Print common elements
-            CommonElementsInArray.PrintCommonElements(array1, arr1Len, array2, arr2Len);            
-
-            OutputHandling.Question("Do you want to find more common elements in other arrays? Y / N");
+            OutputHandling.Question("Do you want to check another array for duplicates? Y / N");
             programRunning = InputHandling.QuestionOptions();
         }
 
