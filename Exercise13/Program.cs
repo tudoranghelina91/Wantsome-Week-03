@@ -13,14 +13,23 @@ namespace Exercise13
     {
         static void RunProgram(ref bool programRunning)
         {
+            // Take string as input
             OutputHandling.Message("Type in a string to check for duplicate characters: ", ConsoleColor.Green, false);
             string s = Console.ReadLine();
+
+            // Remove extra spaces from string and tabs
             string sClean = StringManipulation.RemoveExtraSpaces(s);
-            sClean = sClean.ToLower();
+
+            // Convert string to lower case
+            //sClean = sClean.ToLower();
+
+            // Convert String to char array
             char[] sToChar = Conversion.ConvertToCharArray(sClean);
             int sToCharLen = sToChar.Length;
+
+            // Remove duplicate characters
             DuplicateRemoval.RemoveDuplicates(ref sToChar, ref sToCharLen);
-            //OutputHandling.Message("The string without duplicates is: ", newLine: false);
+
             OutputHandling.PrintArray(sToChar, sToCharLen, "The string without duplicates is: ", "", newLine: false);
             OutputHandling.Question("Do you want to remove duplicate characters in another string? Y / N");
             programRunning = InputHandling.QuestionOptions();

@@ -54,6 +54,7 @@
     <Compile Include="NumericOperation\BaseConversion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleCharacterOperations\CaseConversion.cs" />
     <Compile Include="StringOperations\Conversion.cs" />
     <Compile Include="StringOperations\FrequencyOfElements.cs" />
     <Compile Include="StringOperations\StringManipulation.cs" />

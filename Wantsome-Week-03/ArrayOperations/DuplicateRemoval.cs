@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Wantsome_Week_03.SingleCharacterOperations;
 
 namespace Wantsome_Week_03.ArrayOperations
 {
@@ -18,7 +19,7 @@ namespace Wantsome_Week_03.ArrayOperations
                 {
                     for (int j = i + 1; j < arrLen; j++)
                     {
-                        if (arr[i] == arr[j] && (arr[i] != ' ' && arr[i] != '\n' && arr[i] != '\t'))
+                        if ((arr[i] == arr[j] && (arr[i] != ' ' && arr[i] != '\n' && arr[i] != '\t')))
                         {
                             unique = false;
                             if (j < arrLen - 1)
@@ -45,7 +46,7 @@ namespace Wantsome_Week_03.ArrayOperations
                 {
                     for (int j = i + 1; j < arrLen; j++)
                     {
-                        if (arr[i] == arr[j] && (arr[i] != ' ' && arr[i] != '\n' && arr[i] != '\t'))
+                        if (CaseConversion.ToLowerCase(arr[i]) == CaseConversion.ToLowerCase(arr[j]) && (arr[i] != ' ' && arr[i] != '\n' && arr[i] != '\t'))
                         {
                             unique = false;
                             if (j < arrLen - 1)
