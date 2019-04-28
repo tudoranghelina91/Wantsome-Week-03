@@ -8,10 +8,20 @@ namespace Wantsome_Week_03.Handlers
 {
     public class OutputHandling
     {
-        public static void Message(string message, ConsoleColor consoleColor = ConsoleColor.White)
+        public static void Message(string message, ConsoleColor consoleColor = ConsoleColor.White, bool newLine = true)
         {
-            Console.ForegroundColor = consoleColor;
-            Console.WriteLine(message);
+            if (newLine)
+            {
+                Console.ForegroundColor = consoleColor;
+                Console.WriteLine(message);
+            }
+
+            else
+            {
+                Console.ForegroundColor = consoleColor;
+                Console.Write(message);
+            }
+
             Console.ResetColor();
         }
 
@@ -21,15 +31,15 @@ namespace Wantsome_Week_03.Handlers
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine(askMessage);
-                Console.ResetColor();
             }
 
             else
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write(askMessage);
-                Console.ResetColor();
             }
+
+            Console.ResetColor();
         }
 
         public static void Error(string errorMessage)
@@ -64,19 +74,35 @@ namespace Wantsome_Week_03.Handlers
             }
         }
 
-        public static void PrintArray(int[] arr, int arrLen, string resultMessage, string separator = " ")
+        public static void PrintArray(int[] arr, int arrLen, string resultMessage, string separator = " ", string prefix = "", bool newLine = true)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(resultMessage);
+            if (newLine)
+            {
+                Console.WriteLine(resultMessage);
+            }
+
+            else
+            {
+                Console.Write(resultMessage + separator);
+            }
+
             Console.ResetColor();
+            if(prefix != "")
+            {
+                Console.Write(prefix);
+            }
             for (int i = 0; i < arrLen; i++)
             {
+
                 if (i < arrLen - 1)
                     Console.Write("{0}{1}", arr[i], separator);
 
                 else
                     Console.Write("{0}", arr[i]);
             }
+
+            Console.WriteLine();
         }
     }
 }
