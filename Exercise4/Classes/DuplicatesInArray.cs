@@ -10,20 +10,18 @@ namespace Exercise4.Classes
     {
         public static bool HasDuplicates(int[] arr, int arrLen)
         {
-            bool hasDuplicates = false;
-
             for (int i = 0; i < arrLen-1; i++)
             {
                 for (int j = i + 1; j < arrLen; j++)
                 {
                     if (arr[i] == arr[j])
                     {
-                        hasDuplicates = true;
+                        return true;
                     }
                 }
             }
 
-            return hasDuplicates;
+            return false;
         }
     }
 }

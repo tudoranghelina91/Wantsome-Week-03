@@ -74,6 +74,17 @@ namespace Wantsome_Week_03.Handlers
             }
         }
 
+        public static void PrintArrayLine(char[] arr, int arrLen, string resultMessage = "The array values are", string separator = "-")
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(resultMessage);
+            Console.ResetColor();
+            for (int i = 0; i < arrLen; i++)
+            {
+                Console.WriteLine("[{0}] {1} {2}", i, separator, arr[i]);
+            }
+        }
+
         public static void PrintArray(int[] arr, int arrLen, string resultMessage, string separator = " ", string prefix = "", bool newLine = true)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -89,6 +100,37 @@ namespace Wantsome_Week_03.Handlers
 
             Console.ResetColor();
             if(prefix != "")
+            {
+                Console.Write(prefix);
+            }
+            for (int i = 0; i < arrLen; i++)
+            {
+
+                if (i < arrLen - 1)
+                    Console.Write("{0}{1}", arr[i], separator);
+
+                else
+                    Console.Write("{0}", arr[i]);
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void PrintArray(char[] arr, int arrLen, string resultMessage, string separator = " ", string prefix = "", bool newLine = true)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            if (newLine)
+            {
+                Console.WriteLine(resultMessage);
+            }
+
+            else
+            {
+                Console.Write(resultMessage + separator);
+            }
+
+            Console.ResetColor();
+            if (prefix != "")
             {
                 Console.Write(prefix);
             }
