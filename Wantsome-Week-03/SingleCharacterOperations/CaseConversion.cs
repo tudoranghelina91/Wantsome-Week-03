@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wantsome_Week_03.SingleCharacterOperations
 {
-    class CaseConversion
+    public class CaseConversion
     {
         public static char ToUpperCase (char c)
         {
