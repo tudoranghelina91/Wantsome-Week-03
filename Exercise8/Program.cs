@@ -9,23 +9,17 @@ namespace Exercise8
     {
         static void RunProgram(ref bool programRunning)
         {
-            // length of single linked list
-            int listLength = InputHandling.ReadValue("Length of linked list: ");
-
-            // create single linked list
+            int listLength = InputHandling.ReadCollectionLength("Length of linked list: ");
             SingleLinkedList myList = new SingleLinkedList();
 
-            // read values into linked list
-            for (int i = 0; i < listLength; i++)
-            {
-                myList.AddLast(myList, InputHandling.ReadValue(""));
-            }
+            int lastFailIndex = 0;
+            InputHandling.ReadCollectionElements(ref myList, listLength, ref lastFailIndex);
+
+            int bindPoint = InputHandling.ReadCollectionIndex(listLength, "Point to form a cycle to: ");
 
             // create cycle
-            Cycle.CreateCycle(ref myList, ref listLength, 3);
-            
+            Cycle.CreateCycle(ref myList, ref listLength, bindPoint);
             OutputHandling.PrintSingleLinkedList(myList, listLength);
-
             programRunning = InputHandling.QuestionOptions();
         }
 

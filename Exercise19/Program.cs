@@ -12,11 +12,11 @@ namespace Exercise19
     {
         static void RunProgram(ref bool programRunning)
         {
-            int arrLen = InputHandling.ReadArrayLength();
+            int arrLen = InputHandling.ReadCollectionLength();
             int[] arr = new int[arrLen];
             int lastFailIndex = 0;
-            InputHandling.ReadArrayElements(ref arr, arrLen, ref lastFailIndex);
-            int pivot = InputHandling.ReadArrayIndex(arrLen, "Set pivot point: ");
+            InputHandling.ReadCollectionElements(ref arr, arrLen, ref lastFailIndex);
+            int pivot = InputHandling.ReadCollectionIndex(arrLen, "Set pivot point: ");
             int[] arrRotated = ArrayManipulation.RotateArray(arr, arrLen, pivot);
             OutputHandling.PrintArray(arrRotated, arrRotated.Length, "Rotated array: ");
             OutputHandling.Question("Do you want to rotate another array? Y / N");

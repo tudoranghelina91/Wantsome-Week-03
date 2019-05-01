@@ -13,10 +13,10 @@ namespace Exercise4
     {
         static void RunProgram(ref bool programRunning)
         {
-            int arrLen = InputHandling.ReadArrayLength();
+            int arrLen = InputHandling.ReadCollectionLength();
             int[] arr = new int[arrLen];
             int index = 0;
-            InputHandling.ReadArrayElements(ref arr, arrLen, ref index);
+            InputHandling.ReadCollectionElements(ref arr, arrLen, ref index);
             bool hasDuplicates = DuplicatesInArray.HasDuplicates(arr, arrLen);
             if (hasDuplicates)
             {

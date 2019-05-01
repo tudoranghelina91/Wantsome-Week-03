@@ -12,10 +12,10 @@ namespace Exercise7
     {
         static void RunProgram(ref bool programRunning)
         {
-            int arrLen = InputHandling.ReadArrayLength();
+            int arrLen = InputHandling.ReadCollectionLength();
             int[] arr = new int[arrLen];
             int index = 0;
-            InputHandling.ReadArrayElements(ref arr, arrLen, ref index);
+            InputHandling.ReadCollectionElements(ref arr, arrLen, ref index);
             int[] freqArray = FrequencyOfElements.GenerateFrequencyArray(arr, arrLen);
             int maxIndex = MaxMinArray.MaxIndex(freqArray, freqArray.Length);
             OutputHandling.Message("The element with the most occurences inside the array is " + maxIndex, ConsoleColor.Magenta);

@@ -14,11 +14,11 @@ namespace Exercise20
         {
             OutputHandling.Message("This program accepts an array and sorts it using Selection Sort");
 
-            int arrLen = InputHandling.ReadArrayLength();
+            int arrLen = InputHandling.ReadCollectionLength();
             int[] arr = new int[arrLen];
             int lastFailIndex = 0;
 
-            InputHandling.ReadArrayElements(ref arr, arrLen, ref lastFailIndex);
+            InputHandling.ReadCollectionElements(ref arr, arrLen, ref lastFailIndex);
             Sorting.SelectSort(ref arr, arrLen);
             OutputHandling.PrintArray(arr, arrLen, "Sorted array using Selection sort: ");
             OutputHandling.Question("Do you want to sort another array with selection sort? Y / N");
