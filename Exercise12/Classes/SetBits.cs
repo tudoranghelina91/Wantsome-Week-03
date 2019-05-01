@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wantsome_Week_03.NumericOperation;
+﻿using Wantsome_Week_03.NumericOperation;
 
 namespace Exercise12.Classes
 {

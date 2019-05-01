@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Exercise6.Classes;
+﻿using Exercise6.Classes;
 using Wantsome_Week_03.Handlers;
 
 namespace Exercise6

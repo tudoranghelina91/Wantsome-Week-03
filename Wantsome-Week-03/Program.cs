@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wantsome_Week_03.Handlers;
-
-namespace Wantsome_Week_03
+﻿namespace Wantsome_Week_03
 {
     class Program
     {

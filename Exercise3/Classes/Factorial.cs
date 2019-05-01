@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Wantsome_Week_03.Handlers;
 using System.Diagnostics;
 
@@ -55,6 +51,11 @@ namespace Exercise3.Classes
                 watch.Stop();
                 var elapsed = watch.Elapsed;
                 OutputHandling.Message("Time elapsed for Recursive approach: " + elapsed.ToString());
+            }
+
+            else
+            {
+                CalculateFactorial(x);
             }
         }
     }
