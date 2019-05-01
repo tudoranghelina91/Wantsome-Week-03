@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FDAE40E4-3BCD-4682-B4F2-95A938890921}</ProjectGuid>
+    <ProjectGuid>{DF457B8D-68D4-405A-AC78-A991C02FBDB8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Wantsome_Week_03</RootNamespace>
-    <AssemblyName>Wantsome-Week-03</AssemblyName>
+    <RootNamespace>Exercise9</RootNamespace>
+    <AssemblyName>Exercise9</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,32 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayOperations\ArrayManipulation.cs" />
-    <Compile Include="ArrayOperations\FrequencyOfElements.cs" />
-    <Compile Include="ArrayOperations\MaxMinArray.cs" />
-    <Compile Include="ArrayOperations\Sorting.cs" />
-    <Compile Include="Handlers\InputHandling.cs" />
-    <Compile Include="Handlers\OutputHandling.cs" />
-    <Compile Include="Handlers\ProgramFlowHandling.cs" />
-    <Compile Include="LinkedListsOperations\Sorting.cs" />
-    <Compile Include="NumericOperation\BaseConversion.cs" />
-    <Compile Include="NumericOperation\ReverseNumber.cs" />
+    <Compile Include="Classes\Merge.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingleCharacterOperations\CaseConversion.cs" />
-    <Compile Include="SingleLinkedList.cs" />
-    <Compile Include="SingleLinkedListNode.cs" />
-    <Compile Include="SingleLinkedListOperations\Cycle.cs" />
-    <Compile Include="StringOperations\Conversion.cs" />
-    <Compile Include="StringOperations\FrequencyOfElements.cs" />
-    <Compile Include="StringOperations\StringManipulation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <ProjectReference Include="..\Wantsome-Week-03\Wantsome-Week-03.csproj">
+      <Project>{fdae40e4-3bcd-4682-b4f2-95a938890921}</Project>
+      <Name>Wantsome-Week-03</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

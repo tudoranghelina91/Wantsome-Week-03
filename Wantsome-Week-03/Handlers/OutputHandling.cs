@@ -163,5 +163,18 @@ namespace Wantsome_Week_03.Handlers
 
             Console.WriteLine();
         }
+
+        public static void PrintLinkedList(LinkedList<int> linkedList)
+        {
+            LinkedListNode<int> linkedListNode = linkedList.First;
+
+            while (linkedListNode != null)
+            {
+                Console.Write("{0} ", linkedListNode.Value);
+                linkedListNode = linkedListNode.Next;
+            }
+
+            Console.WriteLine();
+        }
     }
 }
