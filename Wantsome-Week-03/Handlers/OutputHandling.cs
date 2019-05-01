@@ -160,6 +160,8 @@ namespace Wantsome_Week_03.Handlers
                 node = node.next;
                 start++;
             }
+
+            Console.WriteLine();
         }
     }
 }
