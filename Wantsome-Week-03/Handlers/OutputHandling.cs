@@ -146,5 +146,20 @@ namespace Wantsome_Week_03.Handlers
 
             Console.WriteLine();
         }
+
+        public static void PrintSingleLinkedList(SingleLinkedList singleLinkedList, int singleLinkedListLength)
+        {
+            SingleLinkedListNode node = singleLinkedList.head;
+
+            // used for cycles
+            int start = 0;
+
+            while (node != null && start != singleLinkedListLength)
+            {
+                Console.Write("{0} ", node.nodeData);
+                node = node.next;
+                start++;
+            }
+        }
     }
 }
