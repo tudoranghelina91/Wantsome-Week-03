@@ -16,10 +16,10 @@ namespace Exercise8
             int lastFailIndex = 0;
             InputHandling.ReadCollectionElements(ref myList, listLength, ref lastFailIndex);
 
-
             // create cycle
-            OutputHandling.Question("Do you want to add a cycle to the linked list? Y/N");
-            bool AddCycles = InputHandling.QuestionOptions();
+            OutputHandling.Question("Do you want to add a cycle to the linked list?  Y / N");
+            bool AddCycles = InputHandling.QuestionOptions(false);
+
             if (AddCycles)
             {
                 int bindPoint = InputHandling.ReadCollectionIndex(listLength, "Point to form a cycle to: ");

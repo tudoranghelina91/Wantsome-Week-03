@@ -5,7 +5,7 @@ namespace Wantsome_Week_03.Handlers
 {
     public class InputHandling
     {
-        public static bool QuestionOptions()
+        public static bool QuestionOptions(bool exit = true)
         {
             ConsoleKeyInfo menuOption = Console.ReadKey(true);
 
@@ -16,7 +16,10 @@ namespace Wantsome_Week_03.Handlers
 
             else if (menuOption.Key.Equals(ConsoleKey.N))
             {
-                ProgramFlowHandling.Exit("Program will now exit. Press any key...");
+                if (exit)
+                {
+                    ProgramFlowHandling.Exit("Program will now exit. Press any key...");
+                }
                 return false;
             }
 
