@@ -35,17 +35,18 @@ namespace Exercise9.Classes
                     secondLinkedListNode = secondLinkedListNode.Next;
                 }
 
-                while (firstLinkedListNode != null)
-                {
-                    mergedLinkedList.AddLast(firstLinkedListNode.Value);
-                    firstLinkedListNode = firstLinkedListNode.Next;
-                }
+            }
 
-                while (secondLinkedListNode != null)
-                {
-                    mergedLinkedList.AddLast(secondLinkedListNode.Value);
-                    secondLinkedListNode = secondLinkedListNode.Next;
-                }
+            while (firstLinkedListNode != null)
+            {
+                mergedLinkedList.AddLast(firstLinkedListNode.Value);
+                firstLinkedListNode = firstLinkedListNode.Next;
+            }
+
+            while (secondLinkedListNode != null)
+            {
+                mergedLinkedList.AddLast(secondLinkedListNode.Value);
+                secondLinkedListNode = secondLinkedListNode.Next;
             }
 
             return mergedLinkedList;                        

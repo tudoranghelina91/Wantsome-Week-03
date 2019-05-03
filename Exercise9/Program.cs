@@ -25,7 +25,6 @@ namespace Exercise9
             Sorting.BubbleSort(ref list1);
             Sorting.BubbleSort(ref list2);
             LinkedList<int> mergedList = Merge.MergeLinkedList(list1, list2);
-            Sorting.BubbleSort(ref mergedList);
 
             OutputHandling.Message("First List: ", ConsoleColor.Yellow, false);
             OutputHandling.PrintLinkedList(list1);
