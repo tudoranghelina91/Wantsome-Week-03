@@ -144,5 +144,21 @@ namespace Wantsome_Week_03.Handlers
                 return ReadValue(message);
             }
         }
+
+        public static decimal ReadValueD(string message)
+        {
+            try
+            {
+                OutputHandling.Question(message, false);
+                decimal x = Convert.ToDecimal(Console.ReadLine());
+                return x;
+            }
+
+            catch
+            {
+                OutputHandling.Error("Invalid input value! Must be an integer!");
+                return ReadValueD(message);
+            }
+        }
     }
 }
