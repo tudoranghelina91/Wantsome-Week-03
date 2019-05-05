@@ -37,6 +37,11 @@ namespace AddTwoNumbersInAFile
             File.AppendAllText("../../IOFile.txt", "\n\n");
             File.AppendAllText("../../IOFile.txt", "The sum of every number inside the text: \n\n");
             File.AppendAllText("../../IOFile.txt", s.ToString());
+
+            // Print text content to screen
+            Console.WriteLine(File.ReadAllText("../../IOFile.txt"));
+
+            Console.ReadLine();
         }
     }
 }
