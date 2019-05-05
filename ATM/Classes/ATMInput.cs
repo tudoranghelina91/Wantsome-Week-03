@@ -10,6 +10,23 @@ namespace ATM.Classes
 {
     public class ATMInput
     {
+        public static void Withdraw(ref decimal balance)
+        {
+            decimal amount = InputHandling.ReadValueD("Amount to withdraw: ");
+            Operations.Withdraw(amount, ref balance);
+        }
+
+        static void CheckBalance(decimal balance)
+        {
+            Operations.CheckBalance(balance);
+        }
+
+        public static void Deposit(ref decimal balance)
+        {
+            decimal amount = InputHandling.ReadValueD("Amount to deposit: ");
+            Operations.Deposit(amount, ref balance);
+        }
+
         public static void MainMenuInput(ref decimal balance)
         {
             Console.WriteLine();
@@ -17,22 +34,17 @@ namespace ATM.Classes
 
             if (cki.Key.Equals(ConsoleKey.C))
             {
-                Operations.CheckBalance(balance);
-                ATMOutput.MainMenuOutput(ref balance, false);
+                CheckBalance(balance);
             }
 
             else if (cki.Key.Equals(ConsoleKey.D))
             {
-                decimal amount = InputHandling.ReadValueD("Amount to deposit: ");
-                Operations.Deposit(amount, ref balance);
-                ATMOutput.MainMenuOutput(ref balance, false);
+                Deposit(ref balance);
             }
 
             else if (cki.Key.Equals(ConsoleKey.W))
             {
-                decimal amount = InputHandling.ReadValueD("Amount to withdraw: ");
-                Operations.Withdraw(amount, ref balance);
-                ATMOutput.MainMenuOutput(ref balance, false);
+                Withdraw(ref balance);
             }
 
             else if (cki.Key.Equals(ConsoleKey.E))

@@ -50,12 +50,17 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework 3.1", "Homework 3.1", "{15A87F1B-3FCE-40D9-B517-D13F32B5309A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework 3.2", "Homework 3.2", "{042875EB-9A58-4CF4-9A16-54B6676B6FB3}"
+	ProjectSection(SolutionItems) = preProject
+		Homework Github Links.txt = Homework Github Links.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapYear", "..\LeapYear\LeapYear.csproj", "{00E70A1A-49AF-455A-95F3-6339542908D7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM", "..\ATM\ATM.csproj", "{B1AA26A9-5F3C-42C0-A474-BB32AB07A63B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTwoNumbersInAFile", "..\AddTwoNumbersInAFile\AddTwoNumbersInAFile.csproj", "{B52CB183-FC3A-4BD9-A899-A1D41B0E8A5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D1032357-2737-436D-8C14-D8EAEA2FFEC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
