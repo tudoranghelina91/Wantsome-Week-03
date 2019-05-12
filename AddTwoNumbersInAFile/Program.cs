@@ -15,8 +15,7 @@ namespace AddTwoNumbersInAFile
             const string PATH = "../../IOFile.txt";
 
             string fileContents = FileInputOutput.ReadFileContents(PATH);
-            string[] fileContentsSplit = StringManipulation.SplitString(fileContents, Separators.GenerateSeparators());
-            FileInputOutput.OutputSum(Calculus.CalculateSum(fileContentsSplit), PATH);
+            FileInputOutput.OutputSum(Calculus.CalculateSum(fileContents), PATH);
             Console.WriteLine(File.ReadAllText(PATH));
             Console.ReadLine();
         }

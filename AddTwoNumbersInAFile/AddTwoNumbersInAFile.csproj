@@ -52,8 +52,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Separators.cs" />
-    <Compile Include="Classes\StringManipulation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
