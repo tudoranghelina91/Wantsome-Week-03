@@ -9,17 +9,17 @@ namespace AddTwoNumbersInAFile.Classes
 {
     class FileInputOutput
     {
-        public static string ReadFileContents()
+        public static string ReadFileContents(string path)
         {
             // read all file contents into a string
-            return File.ReadAllText("../../IOFile.txt");
+            return File.ReadAllText(path);
         }
 
-        public static void OutputSum(int s)
+        public static void OutputSum(int s, string path)
         {
-            File.AppendAllText("../../IOFile.txt", "\n\n");
-            File.AppendAllText("../../IOFile.txt", "The sum of every number inside the text: \n\n");
-            File.AppendAllText("../../IOFile.txt", s.ToString());
+            File.AppendAllText(path, "\n\n");
+            File.AppendAllText(path, "The sum of every number inside the text: \n\n");
+            File.AppendAllText(path, s.ToString());
         }
     }
 }

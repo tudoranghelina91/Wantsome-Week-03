@@ -1,3 +1,15 @@
 Input Values:
 
 12   8    42
+
+The sum of every number inside the text: 
+
+62
+
+The sum of every number inside the text: 
+
+124
+
+The sum of every number inside the text: 
+
+248

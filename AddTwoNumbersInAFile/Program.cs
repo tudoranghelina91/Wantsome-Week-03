@@ -12,10 +12,12 @@ namespace AddTwoNumbersInAFile
     {
         static void Main(string[] args)
         {
-            string fileContents = FileInputOutput.ReadFileContents();
+            const string PATH = "../../IOFile.txt";
+
+            string fileContents = FileInputOutput.ReadFileContents(PATH);
             string[] fileContentsSplit = StringManipulation.SplitString(fileContents, Separators.GenerateSeparators());
-            FileInputOutput.OutputSum(Calculus.CalculateSum(fileContentsSplit));
-            Console.WriteLine(File.ReadAllText("../../IOFile.txt"));
+            FileInputOutput.OutputSum(Calculus.CalculateSum(fileContentsSplit), PATH);
+            Console.WriteLine(File.ReadAllText(PATH));
             Console.ReadLine();
         }
     }
